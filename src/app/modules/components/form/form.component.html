@@ -1,0 +1,44 @@
+<div class="content p-4">
+  <section>
+    <h2>El Formulario en Bootstrap</h2>
+    <div *ngIf="formBootstrap" class="content">
+      <form *ngIf="formBootstrap" [formGroup]="formBootstrap" name="formBootstrap" id="formBootstrap" [class.was-validated]="isFormBootstrapSubmitted" class="needs-validation" novalidate>
+        <div class="row row-cols-2">
+          <div class="col form-group">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input formControlName="nombre" type="text" class="form-control" id="nombre" aria-describedby="nombre" required="{{ isRequired('nombre', formBootstrap) }}">
+            <div class="invalid-feedback">
+              {{ _validatorService.getMessage(formBootstrap.controls['nombre']) }}
+            </div>
+          </div>
+          <div class="col form-group">
+            <label for="apellidoPaterno" class="form-label">Apellido Paterno:</label>
+            <input formControlName="apellidoPaterno" type="text" class="form-control" id="apellidoPaterno" aria-describedby="apellidoPaterno" required="{{ isRequired('apellidoPaterno', formBootstrap) }}">
+            <div class="invalid-feedback">
+              {{ _validatorService.getMessage(formBootstrap.controls['apellidoPaterno']) }}
+            </div>
+          </div>
+          <div class="col form-group">
+            <label for="apellidoPaterno" class="form-label">Apellido Materno:</label>
+            <input formControlName="apellidoPaterno" type="text" class="form-control" id="apellidoPaterno" aria-describedby="apellidoPaterno" required="{{ isRequired('apellidoPaterno', formBootstrap) }}">
+            <div class="invalid-feedback">
+              {{ _validatorService.getMessage(formBootstrap.controls['apellidoPaterno']) }}
+            </div>
+          </div>
+          <div class="col form-group">
+            <label for="apellidoPaterno" class="form-label">Apellido Paterno:</label>
+            <input formControlName="apellidoPaterno" type="text" class="form-control" id="apellidoPaterno" aria-describedby="apellidoPaterno" required="{{ isRequired('apellidoPaterno', formBootstrap) }}">
+            <div class="invalid-feedback">
+              {{ _validatorService.getMessage(formBootstrap.controls['apellidoPaterno']) }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-end">
+            <button type="submit" class="btn btn-primary" (click)="onClickGuardarBootstrap()">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
